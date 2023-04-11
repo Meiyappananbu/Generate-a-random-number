@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    html{
+    margin:0;
+    padding:0;
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.Title{
+    padding:50px;
+    box-shadow: 5px 5px 20px grey;
+    border-radius: 20px;
+}
+#show,#GeneratedNum{
+    text-align: center;
+}
+#randomNum{
+    padding:8px;
+    border:1px solid grey;
+    border-radius: 15px;
+    margin-left: 140px;
+}
+#develop{
+    margin-left: 20px;
+}
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRETA</title>
+</head>
+<body>
+    <div class="Title">
+        <h1>Random Number Generator</h1>
+        <p id="show">Generator a random number from 1 to 5</p>
+        <p id="show">Click the below button</p>
+        <button id="randomNum" onclick="work()" type="button">Generate Number</button>
+        <p id="GeneratedNum"></p>
+    </div>
+    <p id="develop">Developed by <a href="https://www.linkedin.com/in/meiyappan-a-23a697206">Kreta Volunteer</a> </p>
+</body>
+<script>
+    function work(){
+        while(true){
+            var x=Math.random();
+            x=x*10;
+            x=Math.floor(x);
+            if(x<=5 && x!=0){
+                break 
+            }
+        }
+        alert("Generated Number is "+x);
+        document.getElementById("GeneratedNum").innerHTML="Generated Number is "+x;
+        document.getElementById("randomNum").style.display="none";
+        location.reload();
+}
+</script>
+</html>
